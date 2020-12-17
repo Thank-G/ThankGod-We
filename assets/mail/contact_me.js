@@ -68,8 +68,8 @@ $(function () {
                 },
                 complete: function () {
                     setTimeout(function () {
-                        $this.prop("disabled", false); // Re-enable submit button when AJAX call is complete
-                    }, 10000);
+                        $this.prop("enabled", true); // Re-enable submit button when AJAX call is complete
+                    }, 1000);
                 },
             });
         },
@@ -78,10 +78,10 @@ $(function () {
         },
     });
 
-    // $('a[data-toggle="tab"]').click(function (e) {
-    //     e.preventDefault();
-    //     $(this).tab("show");
-    // });
+    $('a[data-toggle="tab"]').click(function (e) {
+        e.preventDefault();
+        $(this).tab("show");
+    });
 });
 
 /*When clicking on Full hide fail/success boxes */
