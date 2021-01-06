@@ -642,8 +642,8 @@ pre code {
   height: 100%;
   width: 20%;
 
-  -webkit-animation: 4s linear 0s infinite alternate move_eye;
-          animation: 4s linear 0s infinite alternate move_eye;
+  -webkit-animation: 15s linear 0s infinite alternate move_eye;
+          animation: 15s linear 0s infinite alternate move_eye;
 }
 
 @-webkit-keyframes move_eye { from { margin-left: -20%; } to { margin-left: 100%; }  }
