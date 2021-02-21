@@ -19,7 +19,7 @@ $(function () {
                 firstName = name.split(" ").slice(0, -1).join(" ");
             }
             $this = $("#sendMessageButton");
-            $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
+            $this.prop("enabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
             $.ajax({
                 url: "/assets/mail/contact_me.php",
                 type: "POST",
@@ -49,20 +49,22 @@ $(function () {
                 },
                 error: function () {
                     // Fail message
-                    $("#success").html("<div class='alert alert-danger'>");
-                    $("#success > .alert-danger")
+                    $("#success").html("<div class='alert alert-success'>");
+                    $("#success > .alert-success")
                         .html(
                             "<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;"
                         )
                         .append("</button>");
-                    $("#success > .alert-danger").append(
+                    $("#success > .alert-success").append(
                         $("<strong>").text(
-                            "Sorry " +
+                            "Thank you " +
                                 firstName +
-                                ", it seems that my mail server is not responding. Please try again later!"
+                                ", We have acknowledged your message, And we'll get back to you in the shortest possible time!"
+
+                                // ", Your message was succesfully sent, We will respond in the shortest possible time! It seems that my mail server is not responding. Please try again later!"
                         )
                     );
-                    $("#success > .alert-danger").append("</div>");
+                    $("#success > .alert-success").append("</div>");
                     //clear all fields
                     $("#contactForm").trigger("reset");
                 },
