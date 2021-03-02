@@ -59,7 +59,7 @@ $(function () {
                         $("<strong>").text(
                             "Thank you " +
                                 firstName +
-                                ", We have acknowledged your message, And we'll get back to you in the shortest possible time!"
+                                "! We have acknowledged your message, And we'll get back to you in the shortest possible time."
 
                                 // ", Your message was succesfully sent, We will respond in the shortest possible time! It seems that my mail server is not responding. Please try again later!"
                         )
