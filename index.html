@@ -721,7 +721,9 @@
     <!-- <script src="//code.tidio.co/oeevmtj91suvwyb1vpccaomie8h3mlrg.js" async></script> -->
     <script src="//code.tidio.co/ss9nwmwihwtlaxold5k08uwolo0poioe.js" async></script>
 
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+    <script src="/js/smtp.js"></script>
+
 
     <script>
         function validateFields() {
@@ -764,7 +766,7 @@
               To: 'bereonwuthankgod@gmail.com',
               From: 'bereonwuthankgod@gmail.com',
               Subject: 'ENQUIRY FROM THANK-G TECH WEBSITE',
-            Body: `<h4>Hello there, </h4> <p><b>You have received a new mail from ${name} who just visited your website</b></p><br/> <b>HERE ARE THE DETAILS:</b> <br/><p>NAME: ${name}</p> <p>EMAIL: ${email}</p> <p>PHONE: ${phone}</p> <br/> <p><b>MESSAGE:</b> </p> <p> ${message} </p>`,
+            Body: `<h4>Hello there, </h4> <p>You have received a new mail from <b>${name}</b> who just visited your website</p><br/> <b>HERE ARE THE DETAILS:</b> <br/><p>NAME: <b>${name}</b></p> <p>EMAIL: <b>${email}</b></p> <p>PHONE: <b>${phone}</b></p> <br/> <p><b>MESSAGE:</b> </p> <p> <b>${message}</b> </p>`,
             })
               .then(function (message) {
                 // alert(
